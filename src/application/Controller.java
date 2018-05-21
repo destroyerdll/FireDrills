@@ -74,8 +74,7 @@ public class Controller{
 		    }
 		}
 	});
-	 
-	 
+
 	 
 	 //Подія натискання Enter для запиту на сервер
 	 search.setOnKeyPressed(new EventHandler<KeyEvent>() {
@@ -89,7 +88,6 @@ public class Controller{
 						events.query = search.getText();
 					    events.Tours();  
 					    list.setItems(events.data);
-					    
 					    back.setVisible(true);
 					    HBox.setVisible(true);
 					    cityPane.setVisible(true); 

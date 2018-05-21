@@ -21,13 +21,12 @@ public class Connecthttp {
 		this.name = name;
 	}
 
-
-	String link = "http://api.songkick.com/api/3.0/search/artists.json?&query=";
+	String link_url = "http://api.songkick.com/api/3.0/search/artists.json?&query=";
     String apiKey = "&apikey=iF1N0jYrhI5wtG3n";
 
     public void Connect()  throws Exception {
-    	String linka = link + query.replace(" ", "_") + apiKey;
-    	URL url = new URL(linka);
+    	String link = link_url + query.replace(" ", "_") + apiKey;
+    	URL url = new URL(link);
     	HttpURLConnection con = (HttpURLConnection) url.openConnection();
     	con.setRequestMethod("GET");
     	BufferedReader in = new BufferedReader(
@@ -43,8 +42,7 @@ public class Connecthttp {
 	     JsonElement jelement = new JsonParser().parse(json).getAsJsonObject();
 	     JsonObject  jobject = jelement.getAsJsonObject();
 	     //Виводить айді артиста:
-	    	name = jobject.getAsJsonObject("resultsPage").getAsJsonObject("results").getAsJsonArray("artist").get(0).getAsJsonObject().get("id").getAsInt();
-	    	
+	    	name = jobject.getAsJsonObject("resultsPage").getAsJsonObject("results").getAsJsonArray("artist").get(0).getAsJsonObject().get("id").getAsInt();   	
 
     }
     

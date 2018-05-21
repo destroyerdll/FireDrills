@@ -16,8 +16,6 @@ public class Main extends Application {
 	@Override
     public void start(Stage primaryStage) {		
 		try {
-		
-    
 	AnchorPane pane = FXMLLoader.load(Main.class.getResource("video.fxml"));
 	  
        primaryStage.setScene(new Scene(pane));
@@ -27,10 +25,7 @@ public class Main extends Application {
     }
 	public static void main(String[] args) {
 		launch(args);	
-		
-	    
-		
-		
+			
 	}	
  }
 
