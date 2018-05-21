@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="640.0" style="-fx-background-color: #615b81;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <MediaView fx:id="mv" fitHeight="360.0" fitWidth="640.0" />
+      <AnchorPane fx:id="menu" layoutX="152.0" layoutY="112.0" maxHeight="360.0" maxWidth="640.0" prefHeight="124.0" prefWidth="337.0" style="-fx-background-color: #000000; -fx-opacity: 0.5;">
+         <children>
+            <TextField fx:id="search" layoutX="23.0" layoutY="78.0" prefHeight="25.0" prefWidth="292.0" style="-fx-background-color: #e4e4e4;" />
+            <Label layoutX="11.0" layoutY="31.0" prefHeight="38.0" prefWidth="315.0" style="-fx-opacity: 0.7;" text="INSERT BAND NAME HERE:" textFill="#aeaeae">
+               <font>
+                  <Font name="VCR OSD Mono" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="logo" fitHeight="59.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.9;">
+               <image>
+                  <Image url="@../../res/logo.gif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="sound" fitHeight="23.0" fitWidth="16.0" layoutX="244.0" layoutY="16.0" onMouseClicked="#onMute" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../res/2.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="0.07" contrast="-1.0" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="stop" fitHeight="14.0" fitWidth="16.0" layoutX="221.0" layoutY="16.0" onMouseClicked="#onClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../res/3.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <HBox fx:id="HBox" layoutX="100.0" layoutY="48.0" prefHeight="236.0" prefWidth="442.0">
+         <children>
+            <ListView fx:id="list" blendMode="DARKEN" opacity="0.91" prefHeight="289.0" prefWidth="442.0" style="-fx-control-inner-background: #000000;" />
+         </children>
+      </HBox>
+      <AnchorPane fx:id="cityPane" layoutX="101.0" layoutY="17.0" prefHeight="31.0" prefWidth="385.0" style="-fx-opacity: 0.9; -fx-background-color: #000000;">
+         <children>
+            <Label fx:id="city" layoutX="83.0" layoutY="-1.0" prefHeight="32.0" prefWidth="344.0" textFill="#eeeeee">
+               <font>
+                  <Font name="VCR OSD Mono" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="114.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../res/city.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="back" fitHeight="29.0" fitWidth="45.0" layoutX="20.0" layoutY="131.0" onMouseClicked="#onBack" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.8;">
+         <image>
+            <Image url="@../../res/4.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
