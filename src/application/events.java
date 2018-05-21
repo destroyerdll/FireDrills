@@ -45,13 +45,11 @@ public class events extends Connecthttp {
 	    	city = jobject.getAsJsonObject("resultsPage").getAsJsonObject("results").getAsJsonArray("event").get(i).getAsJsonObject().getAsJsonObject("location").get("city").getAsString();
 	    	data.add(nameEvents);
 	    	cityarray.add(city);
-
 	     }
 	}
-
+	
 	public void Clear() {
 		data.clear();
 		cityarray.clear();
 	}	
-
 }

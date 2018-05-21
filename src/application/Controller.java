@@ -46,7 +46,6 @@ public class Controller{
 	private Label city;
 	@FXML
 	private ImageView back;
-	events events = new events();
 	private int a;
     @FXML
     public void initialize(){	
@@ -109,10 +108,7 @@ public class Controller{
      }else if(mp.isMute()) {
     	 mp.setMute(true);
      }
-     
-     
-     
-     
+  
     }
     
     @FXML
@@ -122,12 +118,9 @@ public class Controller{
    	 back.setVisible(false);
    	 menu.setVisible(true);
    	 city.setText("");
-     
-   	 
+ 	 
     }
-    
-    
-    
+
     @FXML
     public void onMute() {
     	mp.setMute(true);
